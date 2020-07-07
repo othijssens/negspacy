@@ -4,6 +4,138 @@ Default termsets for various languages
 
 LANGUAGES = dict()
 
+# Dutch termset dictionary
+nl = dict()
+nl_clinical = dict()
+
+nl_pseudo = [
+    "probleemloos",
+    "zonder probleem",
+    "zonder moeilijkheid",
+    "geen verandering",
+    "geen duidelijke verandering",
+    "geen evidente verandering",
+    "geen significante verandering",
+    "geen significante stijging",
+    "geen stijging",
+    "niet alleen",
+    "niet noodzakelijk",
+    "niet zeker of",
+    "niet zeker dat",
+    "niet uitsluiten"
+]
+
+nl_pseudo_clinical = nl_pseudo + [
+    "geen verbetering",
+    "geen verhoging",
+    "geen afwijking",
+    "geen afwijkingen",
+    "geen oorzaak",
+    "geen evidente oorzaak",
+    "niet verdween"
+]
+
+nl_preceding = [
+    "afwezigheid van",
+    "uitgesloten van",
+    "vrij van",
+    "geen",
+    "geen teken van",
+    "geen bewijs van",
+    "geen verder bewijs",
+    "geen enkel bewijs",
+    "geen aanwijzing van",
+    "geen aanwijzing voor",
+    "zonder",
+    "zonder bewijs",
+    "niet",
+    "niets",
+    "noch",
+    "nooit",
+    "negatief"   ,
+    "ontkent"
+]
+
+nl_preceding_clinical = nl_preceding + [
+    "geen beeld van",
+    "negatief voor",
+    "atypische symptomen"
+]
+
+nl_following = [
+    "afwezig",
+    "geweigerd",
+    "niet aanwezig",
+    "niet aanweisbaar",
+    "niet vastgesteld",
+    "niet van toepassing",
+    "niet het geval",
+    "niet bekend",
+    "geldt niet",
+    "worden uitgesloten",
+    "zijn uitgesloten",
+    "is uitgesloten",
+    "werd uitgesloten",
+    "onwaarschijnlijk",
+    "twijfelachtig"
+]
+
+nl_following_clinical = nl_following + [
+    "is negatief"
+]
+
+nl_termination = [
+    "hoewel",
+    "losstaand van",
+    "onafhankelijk van",
+    "met uitzondering van",
+    "behalve",
+    "maar",
+    "echter",
+    "niettemin",
+    "desalniettemin"
+    "ondanks",
+    "nog wel"
+]
+
+nl_termination_clinical = nl_termination + [
+    "als oorzaak van",
+    "als de oorzaak van",
+    "als reden voor",
+    "als redenen voor",
+    "als de reden van",
+    "als een reden voor",
+    "als bijwerking van",
+    "als trigger voor",
+    "als gevolg van",
+    "omwille van",
+    "als secundaire oorzaak van",
+    "als tweede oorzaak van",
+    "als tweede reden van",
+    "als bron voor",
+    "als een bron van",
+    "als ziekteoorzaak",
+    "als etiologie van",
+    "als oorsprong voor"
+]
+
+nl["pseudo_negations"] = nl_pseudo
+nl_clinical["pseudo_negations"] = nl_pseudo_clinical
+
+nl["preceding_negations"] = nl_preceding
+nl_clinical["preceding_negations"] = nl_preceding_clinical
+
+nl["following_negations"] = nl_following
+nl_clinical["following_negations"] = nl_following_clinical
+
+nl["termination"] = nl_termination
+nl_clinical["termination"] = nl_termination_clinical
+
+LANGUAGES["nl"] = nl
+LANGUAGES["nl_clinical"] = nl_clinical
+
+
+
 # english termset dictionary
 en = dict()
 pseudo = [
