@@ -81,7 +81,8 @@ nl_following = [
 ]
 
 nl_following_clinical = nl_following + [
-    "is negatief"
+    "is negatief",
+    "vrij"  # Needs decompounding, e.g. tumorvrij
 ]
 
 nl_termination = [
