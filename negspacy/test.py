@@ -217,7 +217,6 @@ def test_add_remove_patterns():
 if __name__ == "__main__":
     test()
     test_umls()
-    test_bad_beharor()
     test_own_terminology()
     test_get_patterns()
     test_issue7()
